@@ -1,3 +1,4 @@
+require "pry"
 # Add your code here
 class Dog
   @@name
@@ -10,9 +11,10 @@ class Dog
     @@all << self
   end
 
-  def self.all
+  def print_all
     @@all.each do |dog|
+      binding.pry
       puts dog.name
     end
-  end 
+  end
 end
